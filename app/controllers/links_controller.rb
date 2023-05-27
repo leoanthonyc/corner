@@ -23,9 +23,16 @@ class LinksController < ApplicationController
   end
 
   def edit
+    @link = current_user.links.find(params[:id])
   end
 
   def update
+    link = current_user.links.find(params[:id])
+    if link.update(link_params)
+      redirect_to link, notice: "Link updated!"
+    else
+      render :edit
+    end
   end
 
   private
