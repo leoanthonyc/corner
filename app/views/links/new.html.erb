@@ -1,0 +1,17 @@
+<h2>New Link</h2>
+
+<%= form_for @link do |f| %>
+  <div data-controller='new-link'>
+    <p>
+      <%= f.label :title %><br />
+      <%= f.text_field :title, 'data-new-link-target': 'title' %>
+    </p>
+    <p>
+      <%= f.label :url %><br />
+      <%= f.text_field :url, 'data-action': 'new-link#urlInput' %>
+    </p>
+  </div>
+  <p>
+    <%= f.submit 'Save' %>
+  </p>
+<% end %>
