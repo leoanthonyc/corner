@@ -7,4 +7,14 @@
   <% end %>
 </ul>
 
+<h3>All</h3>
+<% @tags.each do |tag| %>
+  <%= link_to tag.name, links_path(tag: tag.name) %>
+<% end %>
+<ul>
+  <% @links.each do |link| %>
+    <li><%= link_to link.title, link %></li>
+  <% end %>
+</ul>
+
 <%= link_to 'New Link', new_link_path %>

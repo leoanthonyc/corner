@@ -3,6 +3,8 @@ class LinksController < ApplicationController
 
   def index
     @recent_links = Link.by_user(current_user).recent.limit(5)
+    @links = Link.by_user(current_user)
+    @tags = Link.by_user(current_user).tag_counts_on(:tags)
   end
 
   def new
@@ -38,6 +40,6 @@ class LinksController < ApplicationController
   private
 
   def link_params
-    params.require(:link).permit(:title, :url)
+    params.require(:link).permit(:title, :url, :tag_list)
   end
 end

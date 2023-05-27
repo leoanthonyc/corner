@@ -72,3 +72,5 @@ group :test do
 end
 
 gem "devise", "~> 4.9"
+
+gem "acts-as-taggable-on", "~> 9.0"

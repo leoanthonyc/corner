@@ -12,5 +12,10 @@
   <%= @link.url %>
 </p>
 
+<p>
+  <b>Tags:</b>
+  <%= @link.tags.map(&:name).join(', ') %>
+</p>
+
 <%= link_to 'Edit', edit_link_path(@link) %> |
 <%= link_to 'Back', links_path %>

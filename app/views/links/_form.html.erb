@@ -2,11 +2,17 @@
   <div>
     <p>
       <%= f.label :title %><br />
-      <%= f.text_field :title %>
+      <%= f.text_field :title, required: true %>
     </p>
     <p>
       <%= f.label :url %><br />
-      <%= f.text_field :url %>
+      <%= f.text_field :url, required: true %>
+    </p>
+  </div>
+  <div>
+    <p>
+      <%= f.label :tag_list, 'Tags' %><br />
+      <%= f.text_field :tag_list %>
     </p>
   </div>
   <p>
