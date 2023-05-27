@@ -2,7 +2,7 @@ class LinksController < ApplicationController
   before_action :authenticate_user!
 
   def index
-    @links = Link.all
+    @recent_links = Link.by_user(current_user).recent.limit(5)
   end
 
   def new
