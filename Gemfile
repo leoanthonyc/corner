@@ -74,3 +74,5 @@ end
 gem "devise", "~> 4.9"
 
 gem "acts-as-taggable-on", "~> 9.0"
+
+gem "cssbundling-rails", "~> 1.1"
