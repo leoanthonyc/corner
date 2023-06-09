@@ -1,17 +1,18 @@
 <div>
   <h1>Links</h1>
 
-  <h3>Recent</h3>
-  <ul>
-    <% @recent_links.each do |link| %>
-      <li>
-        <%= link_to link.title, link, class: 'text-dark' %>
-        <%= link_to link.url, class: 'text-muted', target: '_href' do %>
-          <i class="bi bi-box-arrow-up-right"></i>
-        <% end %>
-      </li>
-    <% end %>
-  </ul>
+  <%# Temporarily hide this to remove clutter %>
+  <%# <h3>Recent</h3> %>
+  <%# <ul> %>
+  <%#   <% @recent_links.each do |link| %1> %>
+  <%#     <li> %>
+  <%#       <%= link_to link.title, link, class: 'text-dark' %1> %>
+  <%#       <%= link_to link.url, class: 'text-muted', target: '_href' do %1> %>
+  <%#         <i class="bi bi-box-arrow-up-right"></i> %>
+  <%#       <% end %1> %>
+  <%#     </li> %>
+  <%#   <% end %1> %>
+  <%# </ul> %>
 
   <%= link_to 'All', links_path, class: 'text-dark' %>
   <% @tags.each do |tag| %>
