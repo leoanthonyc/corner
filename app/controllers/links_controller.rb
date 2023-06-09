@@ -4,6 +4,7 @@ class LinksController < ApplicationController
   def index
     @recent_links = Link.by_user(current_user).recent.limit(5)
     @links = Link.by_user(current_user)
+    @links = @links.tagged_with(params[:tag]) if params[:tag]
     @tags = Link.by_user(current_user).tag_counts_on(:tags)
   end
 

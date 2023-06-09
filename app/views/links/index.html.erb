@@ -8,7 +8,7 @@
     <% end %>
   </ul>
 
-  <h3>All</h3>
+  <%= link_to 'All', links_path %>
   <% @tags.each do |tag| %>
     <%= link_to tag.name, links_path(tag: tag.name) %>
   <% end %>
