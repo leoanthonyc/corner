@@ -1,20 +1,20 @@
-<div class="p-3">
+<div>
   <h1>Links</h1>
 
   <h3>Recent</h3>
   <ul>
     <% @recent_links.each do |link| %>
-      <li><%= link_to link.title, link %></li>
+      <li><%= link_to link.title, link, class: 'text-dark' %></li>
     <% end %>
   </ul>
 
-  <%= link_to 'All', links_path %>
+  <%= link_to 'All', links_path, class: 'text-dark' %>
   <% @tags.each do |tag| %>
-    <%= link_to tag.name, links_path(tag: tag.name) %>
+    <%= link_to tag.name, links_path(tag: tag.name), class: 'text-dark' %>
   <% end %>
   <ul>
     <% @links.each do |link| %>
-      <li><%= link_to link.title, link %></li>
+      <li><%= link_to link.title, link, class: 'text-dark' %></li>
     <% end %>
   </ul>
 
