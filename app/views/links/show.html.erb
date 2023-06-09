@@ -17,5 +17,5 @@
   <%= @link.tags.map(&:name).join(', ') %>
 </p>
 
-<%= link_to 'Edit', edit_link_path(@link) %> |
-<%= link_to 'Back', links_path %>
+<%= link_to 'Edit', edit_link_path(@link), class: 'text-dark' %> |
+<%= link_to 'Back', links_path, class: 'text-dark' %>
