@@ -18,7 +18,7 @@
 
   <%= render partial: 'tags', locals: { tags: @tags } %>
 
-  <ul>
+  <ul class='container pt-3 pb-2'>
     <% @links.each do |link| %>
       <li>
         <%= link_to link.title, link, class: 'text-dark' %>
