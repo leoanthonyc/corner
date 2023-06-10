@@ -1,0 +1,3 @@
+    <% flash.each do |message_type, message| %>
+      <%= render partial: 'shared/flash', locals: { message_type: message_type, message: message } %>
+    <% end %>
