@@ -1,0 +1,4 @@
+<%= link_to '#All', links_path, class: "text-secondary #{params[:tag].blank? ? 'text-decoration-underline' : 'text-decoration-none'}" %>
+  <% @tags.each do |tag| %>
+    <%= link_to "##{tag.name}", links_path(tag: tag.name), class: "text-secondary #{params[:tag] == tag.name ? 'text-decoration-underline' : 'text-decoration-none'}" %>
+  <% end %>

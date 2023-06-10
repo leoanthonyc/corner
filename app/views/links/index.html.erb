@@ -14,10 +14,8 @@
   <%#   <% end %1> %>
   <%# </ul> %>
 
-  <%= link_to 'All', links_path, class: 'text-dark' %>
-  <% @tags.each do |tag| %>
-    <%= link_to tag.name, links_path(tag: tag.name), class: 'text-dark' %>
-  <% end %>
+  <%= render partial: 'tags', locals: { tags: @tags } %>
+
   <ul>
     <% @links.each do |link| %>
       <li>
