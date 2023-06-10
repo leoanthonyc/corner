@@ -1,4 +1,6 @@
 class Link < ApplicationRecord
+  include Clickable
+
   belongs_to :user
 
   scope :by_user, ->(user) { where(user: user) }
