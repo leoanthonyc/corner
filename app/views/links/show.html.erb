@@ -1,21 +1,23 @@
-<h3>
+<p class='h2'>
   <%= link_to @link.title, @link.url, target: '_blank' %>
-</h3>
-
-<p>
-  <b>Title:</b>
-  <%= @link.title %>
 </p>
 
-<p>
-  <b>Url:</b>
-  <%= @link.url %>
-</p>
+<div class='pt-3 pb-2'>
+  <p>
+    <b>Title:</b>
+    <%= @link.title %>
+  </p>
 
-<p>
-  <b>Tags:</b>
-  <%= @link.tags.map(&:name).join(', ') %>
-</p>
+  <p>
+    <b>Url:</b>
+    <%= @link.url %>
+  </p>
+
+  <p>
+    <b>Tags:</b>
+    <%= @link.tags.map(&:name).join(', ') %>
+  </p>
+</div>
 
 <%= link_to 'Edit', edit_link_path(@link), class: 'text-dark' %> |
 <%= link_to 'Back', links_path, class: 'text-dark' %>
