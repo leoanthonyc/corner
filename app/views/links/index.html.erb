@@ -20,9 +20,10 @@
 
   <ul class='container pt-3 pb-2'>
     <% @links.each do |link| %>
-      <li>
+      <li data-controller='link' data-link-link-id-value="<%= link.id.to_s %>" data-link-link-url-value="<%= link.url %>">
+        <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>" data-link-target="token">
         <%= link_to link.title, link, class: 'text-dark' %>
-        <%= link_to link.url, class: 'text-muted', target: '_href' do %>
+        <%= link_to link.url, class: 'text-muted', target: '_href', data: { action: 'click->link#click' } do %>
           <i class="bi bi-box-arrow-up-right"></i>
         <% end %>
       </li>
